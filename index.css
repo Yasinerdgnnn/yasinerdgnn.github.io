@@ -1,0 +1,28 @@
+#textAna {
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-family: 'Courier New', Courier, monospace;
+    color: #00ff35;
+}
+#backgorund {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+    background-color: #0c0c0c;
+}
+.btn-1 {
+    border: none;
+    background-color: #00ff35;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 2px solid #00ff35;
+}
+.btn-1:hover {
+    color: #00ff35;
+    background-color: #0c0c0c;
+    border: 2px solid #00ff35;
+}

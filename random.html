@@ -1,0 +1,52 @@
+<html>
+<head>
+<title></title>
+<link href="ana.css" rel="stylesheet">
+<meta charset="utf-8">
+<script language="Javascript">
+function tb8_makeArray(n){ this.length = n; return this.length; } tb8_messages = new tb8_makeArray(3); tb8_messages[0] = "TR | Movie Twister"; tb8_messages[1] = "Yasin Erdoğan"; tb8_messages[2] = "Son Film Bükücü"; tb8_rptType = 'infinite'; tb8_rptNbr = 5; tb8_speed = 100; tb8_delay = 2000; 
+var tb8_counter=1; 
+var tb8_currMsg=0; 
+var tb8_tekst =""; 
+var tb8_i=0; 
+var tb8_TID = null; 
+function tb8_pisi(){ tb8_tekst = tb8_tekst + tb8_messages[tb8_currMsg].substring(tb8_i, tb8_i+1); document.title = tb8_tekst; tb8_sp=tb8_speed; tb8_i++; if (tb8_i==tb8_messages[tb8_currMsg].length){ tb8_currMsg++; tb8_i=0; tb8_tekst="";tb8_sp=tb8_delay; } if (tb8_currMsg == tb8_messages.length){ if ((tb8_rptType == 'finite') && (tb8_counter==tb8_rptNbr)){ clearTimeout(tb8_TID); return; } tb8_counter++; tb8_currMsg = 0; } tb8_TID = setTimeout("tb8_pisi()", tb8_sp); } tb8_pisi() 
+</script>
+</head>
+<body id="maingorund">
+
+<script type="text/javascript">
+<!--
+ var imlocation = "images/";
+ var currentdate = 0;
+ var image_number = 0;
+ function ImageArray (n) {
+   this.length = n;
+   for (var i =1; i <= n; i++) {
+     this[i] = ' '
+   }
+ }
+ image = new ImageArray(8)
+ image[0] = 'gsn.png'
+ image[1] = 'socialnetwork.png'
+ image[2] = 'gump.png'
+ image[3] = 'comingtoamerica.png'
+ image[4] = 'gdfatherofharlem.png'
+ image[5] = 'wintersoltier.png'
+ image[6] = 'toystory.png'
+ image[7] = 'wale.png'
+ image[8] = 'zootrapolice.png'
+ var rand = 60/image.length
+ function randomimage() {
+ 	currentdate = new Date()
+ 	image_number = currentdate.getSeconds()
+ 	image_number = Math.floor(image_number/rand)
+ 	return(image[image_number])
+ }
+ document.write("<img src='" + imlocation + randomimage()+ "'>");
+//-->
+</script>
+</br>
+<center><a href=""><button class="btn-1">NEW Movie</button></a></center>
+</body>
+</html>
